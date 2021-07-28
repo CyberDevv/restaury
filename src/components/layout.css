@@ -1,0 +1,23 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Gowun+Dodum&display=swap'); */
+
+@tailwind base;
+
+.navItem {
+  @apply block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-primary duration-300 transition-colors;
+}
+
+.socialLinks {
+  @apply hover:text-primary hover:line-through duration-300 transition-colors;
+}
+
+.btn {
+  @apply uppercase px-6 py-3 text-xs mt-8 rounded-md border-2 border-primary hover:text-white text-primary hover:bg-primary duration-300 transition-colors;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #2D2F31;
+  font-family: 'Gowun Dodum', sans-serif;
+}
