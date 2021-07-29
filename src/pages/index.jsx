@@ -3,11 +3,12 @@ import React from "react"
 import Card from "../components/Card"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { ContactInfo } from "../components/simpleComponents"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <section>
+    <section className= "mb-8">
       {/* Hero */}
       <div className="relative h-screen">
         <StaticImage
@@ -21,12 +22,10 @@ const IndexPage = () => (
           <h5 className="uppercase text-light text-xs tracking-wider">
             Discover awesome Features
           </h5>
-          <h3 className="text-4xl text-light font-cookie text-center">
+          <h3 className="text-6xl text-light font-cookie text-center">
             Invative and invoice Projects
           </h3>
-          <button className="btn">
-            Read more
-          </button>
+          <button className="btn">Read more</button>
         </div>
       </div>
 
@@ -55,19 +54,17 @@ const IndexPage = () => (
         <div className="relative w-full mt-32">
           <StaticImage
             className="h-72 lg:h-screen"
-            src="../images/carousel/1.jpg"
+            src="../images/reservation.jpg"
             alt="reservation"
             placeholder="tracedSVG"
             layout="fullWidth"
           />
           <div className="h-full w-full bg-black bg-opacity-70 absolute top-0 flex flex-col justify-center items-center">
-            <h4 className="text-light text-2xl font-cookie">Reservation</h4>
-            <p className="uppercase text-gray-300 text-sm text-center mt-2">
+            <h4 className="text-light text-4xl font-cookie">Reservation</h4>
+            <p className="uppercase text-gray-300 text-sm text-center mt-2 tracking-widest">
               Opening hour 8:00 AM - 10:00 PM, Every day on week.
             </p>
-            <button className="btn">
-              Book a table
-            </button>
+            <button className="btn">Book a table</button>
           </div>
         </div>
 
@@ -104,20 +101,17 @@ const IndexPage = () => (
               placeholder="Message"
               className="bg-transparent text-sm mt-5 px-4 py-2 border-2 border-secondaryLighter rounded placeholder-secondaryLighter w-full focus:outline-none text-gray-400"
             ></textarea>
-            <div className= "flex justify-center items-center">
-              <button className= "btn">Send Message</button>
+            <div className="flex justify-center items-center">
+              <button className="btn">Send Message</button>
             </div>
           </div>
 
           {/* Other Contacts */}
-          <div className= "mt-20">
-            {/* location */}
-            <div className= "flex space-x-8 items-start">
-              <i>icon</i>
-              <div>
-                <h4 className= "text-xl text-light uppercase">Our Location</h4>
-                <h6 className= "text-gray-400 text-sm mt-1">PO Box 16122 Collins Street</h6>
-              </div>
+          <div className= "flex justify-center">
+            <div className="mt-20 flex flex-col justify-center items-start">
+              <ContactInfo location />
+              <ContactInfo phoneCall />
+              <ContactInfo mail />
             </div>
           </div>
         </div>

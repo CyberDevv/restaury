@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="uppercase text-xs text-gray-400 text-center tracking-widest px-10 py-8">
       © {new Date().getFullYear()}, Restaury. All rights reserved. Built by
           CyberDevv
-          <ul className= "flex space-x-6 mt-8 justify-center">
+          <ul className= "flex mt-8 justify-around">
               <li><a className= "socialLinks" href= "https://twitter.com">Twitter</a></li>
               <li><a className= "socialLinks" href= "https://instagram.com">Instagram</a></li>
               <li><a className= "socialLinks" href= "https://facebook.com">Facebook</a></li>

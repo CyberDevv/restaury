@@ -11,7 +11,7 @@
 }
 
 .btn {
-  @apply uppercase px-6 py-3 text-xs mt-8 rounded-md border-2 border-primary hover:text-white text-primary hover:bg-primary duration-300 transition-colors;
+  @apply uppercase px-6 py-3 font-bold text-xs mt-8 rounded-md border-2 border-primary hover:text-white text-primary hover:bg-primary duration-300 transition-colors;
 }
 
 @tailwind components;
