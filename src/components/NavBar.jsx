@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 
-function Header() {
+function NavBar() {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 absolute top-0 z-10 w-full">
+    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 absolute top-0 z-10 w-full lg:mt-4">
       {/* Logo */}
       <Link
         to="/"
@@ -80,7 +80,7 @@ function Header() {
           isExpanded ? `block` : `hidden`
         } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
       >
-        <div className="text-xs font-semibold lg:flex-grow uppercase bg-secondary bg-opacity-70 py-3 px-4">
+        <div className="text-xs lg:text-sm font-semibold lg:flex-grow lg:flex lg:justify-around uppercase bg-secondary bg-opacity-70 py-3 px-4 lg:px-0 lg:py-0 space-y-4 lg:space-y-0 lg:bg-transparent tracking-widest">
           <Link
             to={`/`}
             href="#responsive-header"
@@ -122,4 +122,4 @@ function Header() {
   )
 }
 
-export default Header
+export default NavBar
