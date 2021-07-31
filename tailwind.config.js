@@ -3,7 +3,7 @@
 
 module.exports = {
   future: {},
-  purge: [],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -12,11 +12,12 @@ module.exports = {
         light: "#dddddd",
         secndaryLight: "#333333",
         secondaryLighter: "#666666",
+        dark: "#222222",
       },
     },
     fontFamily: {
-      'cookie': ['Cookie', 'cursive']
-    }
+      cookie: ["Cookie", "cursive"],
+    },
   },
   variants: {},
   plugins: [],

@@ -8,7 +8,7 @@ const About = () => {
     <Layout>
       <Seo title="About" />
       <section>
-        <div className="relative h-screen">
+        <div className="relative h-screenFourty lg:h-screenSeventy">
           <StaticImage
             className="h-full"
             src="../images/carousel/1.jpg"
@@ -16,9 +16,15 @@ const About = () => {
             placeholder="tracedSVG"
             layout="fullWidth"
           />
-          <div className="bg-black w-full h-full absolute top-0 bg-opacity-50"></div>
+          <div className="bg-black w-full h-full absolute top-0 bg-opacity-50 flex flex-col justify-center items-center">
+            <h3 className="text-6xl lg:text-9xl text-white font-cookie text-center">
+              About Us
+            </h3>
+            <h5 className="uppercase text-primary text-xs lg:text-lg tracking-wider">
+              Our History
+            </h5>
+          </div>
         </div>
-        <h1>Hi people</h1>
       </section>
     </Layout>
   )

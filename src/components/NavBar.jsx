@@ -5,7 +5,7 @@ function NavBar() {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 absolute top-0 z-10 w-full lg:mt-4">
+    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 fixed bg-dark bg-opacity-80 top-0 z-10 w-full lg:pt-8">
       {/* Logo */}
       <Link
         to="/"
@@ -85,34 +85,34 @@ function NavBar() {
             to={`/`}
             href="#responsive-header"
             className="navItem"
-            activeClassName="text-primary"
+            activeClassName="text-primary active"
           >
             Home
           </Link>
           <Link
             to={`/About`}
             className="navItem"
-            activeClassName="text-primary"
+            activeClassName="text-primary active"
           >
             About Us
           </Link>
-          <Link to={`/Menu`} className="navItem" activeClassName="text-primary">
+          <Link to={`/Menu`} className="navItem" activeClassName="text-primary active">
             Menu
           </Link>
           <Link
             to={`/Reservation`}
             className="navItem"
-            activeClassName="text-primary"
+            activeClassName="text-primary active"
           >
             Reservation
           </Link>
-          <Link to={`/Blog`} className="navItem" activeClassName="text-primary">
+          <Link to={`/Blog`} className="navItem" activeClassName="text-primary active">
             Blog
           </Link>
           <Link
             to={`/Location`}
             className="navItem"
-            activeClassName="text-primary"
+            activeClassName="text-primary active"
           >
             Location
           </Link>

@@ -3,7 +3,7 @@
 @tailwind base;
 
 .navItem {
-  @apply block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-primary duration-300 transition-colors;
+  @apply block relative mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-primary duration-300 transition-colors;
 }
 
 .socialLinks {
@@ -24,4 +24,33 @@
 body {
   background-color: #2D2F31;
   font-family: 'Gowun Dodum', sans-serif;
+}
+
+.navItem::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #C7AD88;
+  visibility: hidden;
+  transition: all .3s ease-in-out 0s;
+  -webkit-transition: all .3s ease-in-out 0s;
+  -moz-transition: all .3s ease-in-out 0s;
+  -ms-transition: all .3s ease-in-out 0s;
+  -o-transition: all .3s ease-in-out 0s;
+}
+
+.navItem:hover::before, .active::before {
+  visibility: visible;
+  width: 25px;
+}
+
+.h-screenSeventy {
+  height: 70vh;
+}
+
+.h-screenFourty {
+  height: 40vh;
 }

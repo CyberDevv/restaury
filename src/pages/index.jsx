@@ -86,7 +86,7 @@ const IndexPage = () => (
                 className="contactInput mt-5 lg:mt-0"
               />
               <input
-                type="number"
+                type="tel"
                 placeholder="Mobile Number"
                 className="contactInput mt-5 lg:mt-0"
               />
