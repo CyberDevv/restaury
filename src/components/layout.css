@@ -54,3 +54,7 @@ body {
 .h-screenFourty {
   height: 40vh;
 }
+
+.font-sans {
+  font-family: 'Times New Roman', Times, serif;
+}

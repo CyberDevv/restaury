@@ -2,23 +2,207 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import {
+  MenuList,
+  SectionTitle,
+  TodaySpecialCard,
+} from "../components/simpleComponents"
 
 const Menu = () => {
   return (
     <Layout>
       <Seo title="Menu" />
       <section>
-        <div className="relative h-screen">
+        <div className="relative">
           <StaticImage
-            className="h-full"
+            className="h-screenFourty lg:h-screenSeventy"
             src="../images/carousel/1.jpg"
             alt="carousel-1"
             placeholder="tracedSVG"
             layout="fullWidth"
           />
-          <div className="bg-black w-full h-full absolute top-0 bg-opacity-50"></div>
+          <div className="bg-black w-full h-screenFourty lg:h-screenSeventy absolute top-0 bg-opacity-50 flex flex-col justify-center items-center">
+            <h3 className="text-6xl lg:text-9xl text-white font-cookie text-center">
+              Our Menu
+            </h3>
+            <h5 className="uppercase text-primary text-xs lg:text-lg tracking-wider">
+              The premium food experience
+            </h5>
+          </div>
         </div>
-        <h1>Hi people</h1>
+
+        <div className="bg-gray-100 py-16">
+          <h4 className="uppercase text-center text-primary tracking-widest font-semibold">
+            Today's spacial
+          </h4>
+          <div>
+            <TodaySpecialCard />
+          </div>
+        </div>
+
+        {/* Akpperizers */}
+        <div className="lg:flex">
+          <div className="my-24 container mx-auto px-4 lg:w-8/12 lg:pl-16 lg:pr-8">
+            <SectionTitle title="Appetizers" />
+            <div className="mt-16 space-y-8">
+              <MenuList
+                title="BAKED POTATO JACKETS"
+                desc="Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+                price="$8.50"
+              />
+              <MenuList
+                title="Avocado shell stuffed"
+                desc="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit."
+                price="$5.65"
+              />
+              <MenuList
+                title="QUESADILLAS ACAPULCO"
+                desc="Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+                price="$12.00"
+              />
+              <MenuList
+                title="VENEZUELAN SCRAMBLED EGGS"
+                desc="Nullam mollis. Ut justo. Suspendisse potenti."
+                price="$5.30"
+              />
+              <MenuList
+                title="TEX-MEX CHICKEN WINGS"
+                desc="Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+                price="$3.80"
+              />
+            </div>
+          </div>
+          <StaticImage
+            className="lg:w-4/12 hidden lg:inline"
+            src="../images/carousel/1.jpg"
+            alt="speciality"
+            layout="constrained"
+            placeholder="tracedSVG"
+          />
+        </div>
+
+        {/* Main Dishes */}
+        <div className="lg:flex">
+          <StaticImage
+            className="lg:w-4/12 hidden lg:inline"
+            src="../images/carousel/1.jpg"
+            alt="speciality"
+            layout="constrained"
+            placeholder="tracedSVG"
+          />
+          <div className="py-24 container mx-auto px-4 bg-gray-100 lg:w-8/12 lg:pl-16 lg:pr-8">
+            <SectionTitle title="Main Dishes" light />
+            <div className="mt-16 space-y-8">
+              <MenuList
+                title="BAKED POTATO JACKETS"
+                desc="Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+                price="$8.50"
+              />
+              <MenuList
+                title="Avocado shell stuffed"
+                desc="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit."
+                price="$5.65"
+              />
+              <MenuList
+                title="QUESADILLAS ACAPULCO"
+                desc="Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+                price="$12.00"
+              />
+              <MenuList
+                title="VENEZUELAN SCRAMBLED EGGS"
+                desc="Nullam mollis. Ut justo. Suspendisse potenti."
+                price="$5.30"
+              />
+              <MenuList
+                title="TEX-MEX CHICKEN WINGS"
+                desc="Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+                price="$3.80"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Pizza */}
+        <div className="flex">
+          <div className="my-24 container mx-auto px-4 lg:w-8/12 lg:pl-16 lg:pr-8">
+            <SectionTitle title="Pizza" />
+            <div className="mt-16 space-y-8">
+              <MenuList
+                title="BAKED POTATO JACKETS"
+                desc="Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+                price="$8.50"
+              />
+              <MenuList
+                title="Avocado shell stuffed"
+                desc="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit."
+                price="$5.65"
+              />
+              <MenuList
+                title="QUESADILLAS ACAPULCO"
+                desc="Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+                price="$12.00"
+              />
+              <MenuList
+                title="VENEZUELAN SCRAMBLED EGGS"
+                desc="Nullam mollis. Ut justo. Suspendisse potenti."
+                price="$5.30"
+              />
+              <MenuList
+                title="TEX-MEX CHICKEN WINGS"
+                desc="Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+                price="$3.80"
+              />
+            </div>
+          </div>
+          <StaticImage
+            className="lg:w-4/12 hidden lg:inline"
+            src="../images/carousel/1.jpg"
+            alt="speciality"
+            layout="constrained"
+            placeholder="tracedSVG"
+          />
+        </div>
+
+        {/* Desserts and drinks */}
+        <div className="lg:flex">
+          <StaticImage
+            className="lg:w-4/12 hidden lg:inline"
+            src="../images/carousel/1.jpg"
+            alt="speciality"
+            layout="constrained"
+            placeholder="tracedSVG"
+          />
+          <div className="py-24 container mx-auto px-4 bg-gray-100 lg:w-8/12 lg:pl-16 lg:pr-8">
+            <SectionTitle title="Dessets &amp; Drinks" light />
+            <div className="mt-16 space-y-8">
+              <MenuList
+                title="BAKED POTATO JACKETS"
+                desc="Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+                price="$8.50"
+              />
+              <MenuList
+                title="Avocado shell stuffed"
+                desc="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit."
+                price="$5.65"
+              />
+              <MenuList
+                title="QUESADILLAS ACAPULCO"
+                desc="Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+                price="$12.00"
+              />
+              <MenuList
+                title="VENEZUELAN SCRAMBLED EGGS"
+                desc="Nullam mollis. Ut justo. Suspendisse potenti."
+                price="$5.30"
+              />
+              <MenuList
+                title="TEX-MEX CHICKEN WINGS"
+                desc="Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+                price="$3.80"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </Layout>
   )

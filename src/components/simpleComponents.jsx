@@ -148,4 +148,48 @@ const CountCard = ({ experience, chiefs, clients, hours }) => {
   }
 }
 
-export { ContactInfo, SectionTitle, TestimonialCard, CountCard }
+const TodaySpecialCard = () => {
+  return (
+    <div className="mt-12 px-4 lg:px-0 ">
+      <div className="relative h-86">
+        <StaticImage
+          src="../images/carousel/1.jpg"
+          alt="todaySpecial"
+          placeholder="tracedSVG"
+          layout="constrained"
+          className="h-full"
+        />
+        <div className="absolute top-0 bg-black bg-opacity-50 h-full w-full flex justify-center items-center">
+          <div className="text-white tracking-widest font-bold text-lg">
+            <h3 className="uppercase">Avacado Shell stuffed</h3>
+            <div className="bg-primary w-10 h-0.5 my-8"></div>
+            <h6 className="">$6.50</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const MenuList = ({ title, desc, price }) => {
+  return (
+    <div className="flex justify-between space-x-12">
+      <div className=" lg:pr-36">
+        <h3 className="text-primary uppercase font-bold tracking-widest">
+          {title}
+        </h3>
+        <p className="text-gray-500 mt-4 font-sans">{desc}</p>
+      </div>
+      <h4 className="text-primary font-bold tracking-widest">{price}</h4>
+    </div>
+  )
+}
+
+export {
+  ContactInfo,
+  SectionTitle,
+  TestimonialCard,
+  CountCard,
+  TodaySpecialCard,
+  MenuList,
+}

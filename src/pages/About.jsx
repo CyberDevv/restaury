@@ -35,7 +35,7 @@ const About = () => {
 
         {/* History */}
         <div className="bg-gray-100 px-4 py-24">
-          <div className= "container mx-auto">
+          <div className="container mx-auto">
             <div className="flex flex-col justify-center items-center lg:flex-row lg:space-x-40">
               <div className="lg:w-1/2">
                 <h3 className="text-xl text-primary uppercase font-bold tracking-wider lg:text-2xl">
@@ -43,13 +43,13 @@ const About = () => {
                 </h3>
                 <div className="text-gray-500 mt-4 lg:mt-8 lg:text-lg">
                   <p>
-                    Proin facilisis varius nunc. Curabitur eros risus, ultrices et
-                    dui ut, luctus accumsan nibh. Fusce convallis sapien placerat
-                    tellus suscipit vehicula.
+                    Proin facilisis varius nunc. Curabitur eros risus, ultrices
+                    et dui ut, luctus accumsan nibh. Fusce convallis sapien
+                    placerat tellus suscipit vehicula.
                   </p>
                   <p className="mt-4">
-                    Cras vitae diam ut justo elementum faucibus eget a diam. Etiam
-                    sodales a sem vitae fermentum. Curabitur pellentesque
+                    Cras vitae diam ut justo elementum faucibus eget a diam.
+                    Etiam sodales a sem vitae fermentum. Curabitur pellentesque
                   </p>
                 </div>
               </div>
@@ -112,7 +112,7 @@ const About = () => {
           </div>
 
           {/* counts */}
-          <div className="flex flex-col justify-center items-center pb-12 lg:flex-row container lg:justify-between mx-auto">
+          <div className="flex flex-col justify-center items-center pb-12 lg:flex-row container lg:justify-between mx-auto lg:px-24">
             <CountCard experience />
             <CountCard hours />
             <CountCard clients />
