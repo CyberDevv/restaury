@@ -10,7 +10,7 @@ const OtherDetails = ({name, position, description}) => {
         <p className="uppercase text-gray-300 mt-3 text-center text-xs tracking-widest">
           {position}
         </p>
-        <h5 className="italic text-gray-400 px-14 text-sm mt-3 tracking-wider text-center">
+        <h5 className="italic text-gray-400 px-14 lg:px-0 text-sm mt-3 tracking-wider text-center">
           {description}
         </h5>
       </div>
@@ -20,9 +20,9 @@ const OtherDetails = ({name, position, description}) => {
 const PersonCard = ({lora, andy, john}) => {
   if (john) {
       return (
-        <div className="pb-6 flex justify-center items-center flex-col mt-8">
+        <div className="pb-6 lg:pb-0 flex justify-center items-center flex-col mt-8 lg:mt-0">
           <StaticImage
-            className="h-80 w-64"
+            className="h-80 w-64 lg:w-72"
             src="../images/carousel/1.jpg"
             alt="items-1"
             layout="constrained"
@@ -38,9 +38,9 @@ const PersonCard = ({lora, andy, john}) => {
   }
   if (andy) {
       return (
-        <div className="pb-6 flex justify-center items-center flex-col mt-8">
+        <div className="pb-6 lg:pb-0 flex justify-center items-center flex-col mt-8 lg:mt-0">
           <StaticImage
-            className="h-80 w-64"
+            className="h-80 w-64 lg:w-72"
             src="../images/carousel/1.jpg"
             alt="items-1"
             layout="constrained"
@@ -56,9 +56,9 @@ const PersonCard = ({lora, andy, john}) => {
   }
   if (lora) {
       return (
-        <div className="pb-6 flex justify-center items-center flex-col mt-8">
+        <div className="pb-6 lg:pb-0 flex justify-center items-center flex-col mt-8 lg:mt-0 ">
           <StaticImage
-            className="h-80 w-64"
+            className="h-80 w-64 lg:w-72"
             src="../images/carousel/1.jpg"
             alt="items-1"
             layout="constrained"
