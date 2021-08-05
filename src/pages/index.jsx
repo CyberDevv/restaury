@@ -39,8 +39,7 @@ const IndexPage = () => (
             <SectionTitle title="Popular Dishes" />
 
             {/* dishes */}
-            <div className="mt-24 lg:flex lg:justify-center lg:items-center">
-              <Card />
+            <div className="mt-24">
               <Card />
             </div>
           </div>

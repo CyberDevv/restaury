@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import {
+  HeaderBlock,
   MenuList,
   SectionTitle,
   TodaySpecialCard,
@@ -21,14 +22,7 @@ const Menu = () => {
             placeholder="tracedSVG"
             layout="fullWidth"
           />
-          <div className="bg-black w-full h-screenFourty lg:h-screenSeventy absolute top-0 bg-opacity-50 flex flex-col justify-center items-center">
-            <h3 className="text-6xl lg:text-9xl text-white font-cookie text-center">
-              Our Menu
-            </h3>
-            <h5 className="uppercase text-primary text-xs lg:text-lg tracking-wider">
-              The premium food experience
-            </h5>
-          </div>
+          <HeaderBlock title="Our Menu" desc="The Premium food Experience" />
         </div>
 
         <div className="bg-gray-100 py-16">

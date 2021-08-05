@@ -185,6 +185,19 @@ const MenuList = ({ title, desc, price }) => {
   )
 }
 
+const HeaderBlock = ({title, desc}) => {
+  return (
+    <div className="bg-black w-full h-screenFourty lg:h-screenSeventy absolute top-0 bg-opacity-50 flex flex-col justify-center items-center">
+      <h3 className="text-6xl lg:text-9xl text-white font-cookie text-center">
+        {title}
+      </h3>
+      <h5 className="uppercase text-primary text-xs lg:text-lg tracking-wider">
+        {desc}
+      </h5>
+    </div>
+  )
+}
+
 export {
   ContactInfo,
   SectionTitle,
@@ -192,4 +205,5 @@ export {
   CountCard,
   TodaySpecialCard,
   MenuList,
+  HeaderBlock,
 }

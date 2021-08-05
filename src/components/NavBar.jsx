@@ -109,13 +109,6 @@ function NavBar() {
           <Link to={`/Blog`} className="navItem" activeClassName="text-primary active">
             Blog
           </Link>
-          <Link
-            to={`/Location`}
-            className="navItem"
-            activeClassName="text-primary active"
-          >
-            Location
-          </Link>
         </div>
       </div>
     </nav>

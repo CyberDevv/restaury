@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import NavBar from "./NavBar"
 import "./layout.css"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import Footer from "./Footer"
 
 const Layout = ({ children }) => {

@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import {
   CountCard,
+  HeaderBlock,
   SectionTitle,
   TestimonialCard,
 } from "../components/simpleComponents"
@@ -23,14 +24,7 @@ const About = () => {
             placeholder="tracedSVG"
             layout="fullWidth"
           />
-          <div className="bg-black w-full h-screenFourty lg:h-screenSeventy absolute top-0 bg-opacity-50 flex flex-col justify-center items-center">
-            <h3 className="text-6xl lg:text-9xl text-white font-cookie text-center">
-              About Us
-            </h3>
-            <h5 className="uppercase text-primary text-xs lg:text-lg tracking-wider">
-              Our History
-            </h5>
-          </div>
+          <HeaderBlock title="About Us" desc="Our History" />
         </div>
 
         {/* History */}

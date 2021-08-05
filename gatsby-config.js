@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Restaury`,
@@ -5,7 +9,7 @@ module.exports = {
     author: `@CyberDevv`,
   },
   flags: {
-    THE_FLAG: false
+    THE_FLAG: false,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -66,8 +70,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
-      }
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+      },
     },
     {
       resolve: `gatsby-plugin-purgecss`,
@@ -78,12 +82,20 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Cookie', 'Gowun Dodum']
-        }
-      }
+          families: ["Cookie", "Gowun Dodum"],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `lo4jqmbd3o6q`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
   ],
 }
