@@ -3,6 +3,7 @@ import React from "react"
 import PersonCard from "../components/PersonCard"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Slider from "react-slick"
 import {
   CountCard,
   HeaderBlock,
@@ -98,9 +99,23 @@ const About = () => {
                 <SectionTitle title="Clients Reviews" light />
 
                 {/* Testimonials */}
-                <div className="flex justify-center items-center">
-                  <TestimonialCard />
-                </div>
+                <Slider className="flex justify-center items-center">
+                  <TestimonialCard
+                    name="David Norton"
+                    review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+            corporis error consequuntur asperiores consectetur!"
+                  />
+                  <TestimonialCard
+                    name="Harold Lewis"
+                    review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+            corporis error consequuntur asperiores consectetur!"
+                  />
+                  <TestimonialCard
+                    name="David Norton"
+                    review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+            corporis error consequuntur asperiores consectetur!"
+                  />
+                </Slider>
               </div>
             </div>
           </div>

@@ -26,8 +26,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #2D2F31;
-  font-family: 'Gowun Dodum', sans-serif;
+  background-color: #2d2f31;
+  font-family: "Gowun Dodum", sans-serif;
 }
 
 .navItem::before {
@@ -37,16 +37,17 @@ body {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #C7AD88;
+  background-color: #c7ad88;
   visibility: hidden;
-  transition: all .3s ease-in-out 0s;
-  -webkit-transition: all .3s ease-in-out 0s;
-  -moz-transition: all .3s ease-in-out 0s;
-  -ms-transition: all .3s ease-in-out 0s;
-  -o-transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
 }
 
-.navItem:hover::before, .active::before {
+.navItem:hover::before,
+.active::before {
   visibility: visible;
   width: 25px;
 }
@@ -60,7 +61,7 @@ body {
 }
 
 .font-sans {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .flexImportant {
@@ -82,3 +83,28 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
+/* .mySliderClass::after {
+  content: "My name is my name";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  right: 18px;
+  left: 18px;
+  border: 2px solid red;
+  /* border-top-color: red;
+  border-right-color: red;
+  border-bottom-color: red;
+  border-left-color: red; */
+  /* transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+} */
+
+/* .mySliderClass:hover::after {
+  border-color: #c7ad88;
+}  */

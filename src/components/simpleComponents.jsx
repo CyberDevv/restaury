@@ -75,7 +75,7 @@ const SectionTitle = ({ light, title }) => {
   )
 }
 
-const TestimonialCard = () => {
+const TestimonialCard = ({name, review}) => {
   return (
     <div className="my-12 lg:w-10/12 relative">
       <div className="flex space-x-8 justify-center items-center">
@@ -88,12 +88,11 @@ const TestimonialCard = () => {
         />
         <div className="w-9/12">
           <h3 className="uppercase tracking-widest text-lg font-bold">
-            David Norton
+            {name}
           </h3>
           <div className="h-0.5 bg-primary my-4 w-10"></div>
           <q className="text-gray-500 italic tracking-wide">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
-            corporis error consequuntur asperiores consectetur!
+            {review}
           </q>
         </div>
       </div>

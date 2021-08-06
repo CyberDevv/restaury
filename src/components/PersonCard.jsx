@@ -3,7 +3,7 @@ import React from "react"
 
 const OtherDetails = ({name, position, description}) => {
     return (
-      <div className="px-4 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-center">
+      <div className="px-4 sm:px-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-center">
         <h4 className="text-primary text-xl mt-6 tracking-widest font-bold uppercase text-center">
           {name}
         </h4>
