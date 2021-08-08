@@ -208,6 +208,7 @@ const TodaySpecialCard = () => {
   const specialDish = data.specialDish.nodes
   const settings = {
     autoplay: true,
+    arrows: false,
     dots: true,
     infinite: true,
     speed: 500,
@@ -243,7 +244,7 @@ const TodaySpecialCard = () => {
                 alt={foodName}
                 className="h-full"
               />
-              <div className="absolute top-0 bg-black bg-opacity-50 h-full w-full flex justify-center items-center">
+              <div className="absolute top-0 bg-black bg-opacity-50 h-full w-full flex justify-start items-center px-4 lg:px-0">
                 <div className="text-white tracking-widest font-bold text-lg">
                   <h3 className="uppercase">{foodName}</h3>
                   <div className="bg-primary w-10 h-0.5 my-8"></div>
