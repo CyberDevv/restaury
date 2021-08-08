@@ -84,6 +84,22 @@ body {
   -o-border-radius: 50%;
 }
 
+.slick-next, .slick-prev {
+  font-size: 0;
+line-height: 0;
+position: absolute;
+top: 50%;
+display: block;
+width: 0px !important;
+height: 0px !important;
+padding: 0;
+transform: translate(0, -50%);
+color: transparent;
+border: none;
+outline: none;
+background: transparent;
+}
+
 /* .mySliderClass::after {
   content: "My name is my name";
   display: flex;

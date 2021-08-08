@@ -75,32 +75,86 @@ const SectionTitle = ({ light, title }) => {
   )
 }
 
-const TestimonialCard = ({name, review}) => {
+const TestimonialCardDetaila = ({ name, review }) => {
   return (
-    <div className="my-12 lg:w-10/12 relative">
-      <div className="flex space-x-8 justify-center items-center">
-        <StaticImage
-          src="../images/carousel/1.jpg"
-          alt="testimonial"
-          className="w-4/12 h-36 lg:h-60 lg:w-3/12"
-          layout="constrained"
-          placeholder="tracedSVG"
-        />
-        <div className="w-9/12">
-          <h3 className="uppercase tracking-widest text-lg font-bold">
-            {name}
-          </h3>
-          <div className="h-0.5 bg-primary my-4 w-10"></div>
-          <q className="text-gray-500 italic tracking-wide">
-            {review}
-          </q>
-        </div>
-      </div>
-      <div className="h-full w-full p-5 pl-32 absolute top-0 hidden lg:block">
-        <div className="border-2 border-primary h-full w-full"></div>
-      </div>
+    <div className="w-9/12">
+      <h3 className="uppercase tracking-widest text-lg font-bold">{name}</h3>
+      <div className="h-0.5 bg-primary my-4 w-10"></div>
+      <q className="text-gray-500 italic tracking-wide">{review}</q>
     </div>
   )
+}
+
+const TestimonialCard = ({ david, lewis, person }) => {
+  if (david) {
+    return (
+      <div className="my-12 lg:w-10/12 relative mx-auto">
+        <div className="flex space-x-8 justify-center items-center">
+          <StaticImage
+            src="../images/client-1.jpg"
+            alt="testimonial"
+            className="w-4/12 h-24 lg:h-60 lg:w-3/12"
+            layout="constrained"
+            placeholder="tracedSVG"
+          />
+          <TestimonialCardDetaila
+            name="David Norton"
+            review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+            corporis error consequuntur asperiores consectetur!"
+          />
+        </div>
+        <div className="h-full w-full p-5 pl-32 absolute top-0 hidden lg:block">
+          <div className="border-2 border-primary h-full w-full"></div>
+        </div>
+      </div>
+    )
+  }
+  if (lewis) {
+    return (
+      <div className="my-12 lg:w-10/12 relative mx-auto">
+        <div className="flex space-x-8 justify-center items-center">
+          <StaticImage
+            src="../images/client-2.jpg"
+            alt="testimonial"
+            className="w-4/12 h-24 lg:h-60 lg:w-3/12"
+            layout="constrained"
+            placeholder="tracedSVG"
+          />
+          <TestimonialCardDetaila
+            name="Harold Lewiso"
+            review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+            corporis error consequuntur asperiores consectetur!"
+          />
+        </div>
+        <div className="h-full w-full p-5 pl-32 absolute top-0 hidden lg:block">
+          <div className="border-2 border-primary h-full w-full"></div>
+        </div>
+      </div>
+    )
+  }
+  if (person) {
+    return (
+      <div className="my-12 lg:w-10/12 relative mx-auto">
+        <div className="flex space-x-8 justify-center items-center">
+          <StaticImage
+            src="../images/client-3.jpg"
+            alt="testimonial"
+            className="w-4/12 h-24 lg:h-60 lg:w-3/12"
+            layout="constrained"
+            placeholder="tracedSVG"
+          />
+          <TestimonialCardDetaila
+            name="David Norton"
+            review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+            corporis error consequuntur asperiores consectetur!"
+          />
+        </div>
+        <div className="h-full w-full p-5 pl-32 absolute top-0 hidden lg:block">
+          <div className="border-2 border-primary h-full w-full"></div>
+        </div>
+      </div>
+    )
+  }
 }
 
 const CountCardDetail = ({ label, value }) => {
@@ -115,7 +169,7 @@ const CountCardDetail = ({ label, value }) => {
 const CountCard = ({ experience, chiefs, clients, hours }) => {
   if (experience) {
     return (
-      <div className="flex justify-center flex-col items-center">
+      <div className="mt-12 lg:mt-0 flex justify-center flex-col items-center">
         <IoIosCalendar className="text-4xl text-secondary" />
         <CountCardDetail label="Years Experience" value="23" />
       </div>
@@ -123,7 +177,7 @@ const CountCard = ({ experience, chiefs, clients, hours }) => {
   }
   if (hours) {
     return (
-      <div className="mt-10 lg:mt-0 flex justify-center flex-col items-center">
+      <div className="mt-12 lg:mt-0 flex justify-center flex-col items-center">
         <BiTime className="text-4xl text-secondary" />
         <CountCardDetail label="Hours of Cooking" value="3k+" />
       </div>
@@ -131,7 +185,7 @@ const CountCard = ({ experience, chiefs, clients, hours }) => {
   }
   if (clients) {
     return (
-      <div className="mt-10 lg:mt-0 flex justify-center flex-col items-center">
+      <div className="mt-12 lg:mt-0 flex justify-center flex-col items-center">
         <FaUserFriends className="text-4xl text-secondary" />
         <CountCardDetail label="Happy Clients" value="8k+" />
       </div>
@@ -139,7 +193,7 @@ const CountCard = ({ experience, chiefs, clients, hours }) => {
   }
   if (chiefs) {
     return (
-      <div className="mt-10 lg:mt-0 flex justify-center flex-col items-center">
+      <div className="mt-12 lg:mt-0 flex justify-center flex-col items-center">
         <AiOutlineLike className="text-4xl text-secondary" />
         <CountCardDetail label="Skilled chiefs" value="12" />
       </div>
@@ -184,7 +238,7 @@ const MenuList = ({ title, desc, price }) => {
   )
 }
 
-const HeaderBlock = ({title, desc}) => {
+const HeaderBlock = ({ title, desc }) => {
   return (
     <div className="bg-black w-full h-screenFourty lg:h-screenSeventy absolute top-0 bg-opacity-50 flex flex-col justify-center items-center">
       <h3 className="text-6xl lg:text-9xl text-white font-cookie text-center">

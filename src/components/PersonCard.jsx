@@ -23,7 +23,7 @@ const PersonCard = ({lora, andy, john}) => {
         <div className="pb-6 lg:pb-0 flex justify-center items-center flex-col mt-8 lg:mt-0">
           <StaticImage
             className="h-80 w-64 lg:w-72"
-            src="../images/carousel/1.jpg"
+            src="../images/chef-1.jpg"
             alt="items-1"
             layout="constrained"
             placeholder="tracedSVG"
@@ -41,7 +41,7 @@ const PersonCard = ({lora, andy, john}) => {
         <div className="pb-6 lg:pb-0 flex justify-center items-center flex-col mt-8 lg:mt-0">
           <StaticImage
             className="h-80 w-64 lg:w-72"
-            src="../images/carousel/1.jpg"
+            src="../images/chef-2.jpg"
             alt="items-1"
             layout="constrained"
             placeholder="tracedSVG"
@@ -59,7 +59,7 @@ const PersonCard = ({lora, andy, john}) => {
         <div className="pb-6 lg:pb-0 flex justify-center items-center flex-col mt-8 lg:mt-0 ">
           <StaticImage
             className="h-80 w-64 lg:w-72"
-            src="../images/carousel/1.jpg"
+            src="../images/chef-3.jpg"
             alt="items-1"
             layout="constrained"
             placeholder="tracedSVG"

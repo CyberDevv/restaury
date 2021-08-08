@@ -12,7 +12,7 @@ const Reservation = () => {
         <div className="relative">
           <StaticImage
             className="h-screenFourty lg:h-screenSeventy"
-            src="../images/carousel/1.jpg"
+            src="../images/hero/reservation.jpg"
             alt="carousel-1"
             placeholder="tracedSVG"
             layout="fullWidth"

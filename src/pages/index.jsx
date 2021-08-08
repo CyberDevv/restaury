@@ -13,7 +13,7 @@ const IndexPage = () => (
       <div className="relative h-screen">
         <StaticImage
           className="h-full"
-          src="../images/carousel/1.jpg"
+          src="../images/hero/home.jpg"
           alt="carousel-1"
           placeholder="tracedSVG"
           layout="fullWidth"

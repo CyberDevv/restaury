@@ -11,6 +11,13 @@ import {
   TestimonialCard,
 } from "../components/simpleComponents"
 
+const settings = {
+  autoplay: true,
+  dots: true,
+  infinite: true,
+  arrows: false,
+}
+
 const About = () => {
   return (
     <Layout>
@@ -20,7 +27,7 @@ const About = () => {
         <div className="relative">
           <StaticImage
             className="h-screenFourty lg:h-screenSeventy"
-            src="../images/carousel/1.jpg"
+            src="../images/hero/about.jpg"
             alt="carousel-1"
             placeholder="tracedSVG"
             layout="fullWidth"
@@ -51,13 +58,13 @@ const About = () => {
               <div className="mt-12 relative lg:w-1/2">
                 <div className="flex space-x-8 justify-around items-center">
                   <StaticImage
-                    src="../images/carousel/1.jpg"
+                    src="../images/about-1.jpg"
                     alt="about"
                     layout="constrained"
                     placeholder="tracedSVG"
                   />
                   <StaticImage
-                    src="../images/carousel/1.jpg"
+                    src="../images/about-2.jpg"
                     alt="about"
                     layout="constrained"
                     placeholder="tracedSVG"
@@ -94,37 +101,25 @@ const About = () => {
         <div className="bg-gray-100">
           <div className="py-16 lg:mt-24 flex flex-col items-center justify-center">
             <div className="container mx-auto px-4">
-              <div>
+              <div className= "">
                 {/* Tittle */}
                 <SectionTitle title="Clients Reviews" light />
 
                 {/* Testimonials */}
-                <Slider className="flex justify-center items-center">
-                  <TestimonialCard
-                    name="David Norton"
-                    review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
-            corporis error consequuntur asperiores consectetur!"
-                  />
-                  <TestimonialCard
-                    name="Harold Lewis"
-                    review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
-            corporis error consequuntur asperiores consectetur!"
-                  />
-                  <TestimonialCard
-                    name="David Norton"
-                    review="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
-            corporis error consequuntur asperiores consectetur!"
-                  />
+                <Slider {...settings} className="">
+                  <TestimonialCard david />
+                  <TestimonialCard lewis />
+                  <TestimonialCard person />
                 </Slider>
               </div>
             </div>
           </div>
 
           {/* counts */}
-          <div className="flex flex-col justify-center items-center pb-12 lg:flex-row container lg:justify-between mx-auto lg:px-24">
+          <div className="flex flex-wrap justify-around items-center pb-12 container mx-auto lg:px-24">
             <CountCard experience />
-            <CountCard hours />
             <CountCard clients />
+            <CountCard hours />
             <CountCard chiefs />
           </div>
         </div>
