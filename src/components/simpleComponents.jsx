@@ -5,7 +5,9 @@ import { RiMapPinLine } from "react-icons/ri"
 import { IoIosCalendar } from "react-icons/io"
 import { BiTime } from "react-icons/bi"
 import { FaUserFriends } from "react-icons/fa"
-import { StaticImage } from "gatsby-plugin-image"
+import { getImage, StaticImage, GatsbyImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby"
+import Slider from 'react-slick'
 
 const ContactInfoDetail = ({ label, desc1, desc2 }) => {
   return (
@@ -202,25 +204,57 @@ const CountCard = ({ experience, chiefs, clients, hours }) => {
 }
 
 const TodaySpecialCard = () => {
+  const data = useStaticQuery(query)
+  const specialDish = data.specialDish.nodes
+  const settings = {
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 468,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }
   return (
-    <div className="mt-12 px-4 lg:px-0 ">
-      <div className="relative h-86">
-        <StaticImage
-          src="../images/carousel/1.jpg"
-          alt="todaySpecial"
-          placeholder="tracedSVG"
-          layout="constrained"
-          className="h-full"
-        />
-        <div className="absolute top-0 bg-black bg-opacity-50 h-full w-full flex justify-center items-center">
-          <div className="text-white tracking-widest font-bold text-lg">
-            <h3 className="uppercase">Avacado Shell stuffed</h3>
-            <div className="bg-primary w-10 h-0.5 my-8"></div>
-            <h6 className="">$6.50</h6>
+    <Slider {...settings}>
+      {specialDish.map(dish => {
+        const { id, foodName, price, image } = dish
+        const pathToImage = getImage(image)
+        return (
+          <div key={id} className="mt-12 px-4 lg:px-0">
+            <div className="relative h-86 mx-4">
+              <GatsbyImage
+                image={pathToImage}
+                alt={foodName}
+                className="h-full"
+              />
+              <div className="absolute top-0 bg-black bg-opacity-50 h-full w-full flex justify-center items-center">
+                <div className="text-white tracking-widest font-bold text-lg">
+                  <h3 className="uppercase">{foodName}</h3>
+                  <div className="bg-primary w-10 h-0.5 my-8"></div>
+                  <h6 className="">${price}</h6>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        )
+      })}
+    </Slider>
   )
 }
 
@@ -250,6 +284,21 @@ const HeaderBlock = ({ title, desc }) => {
     </div>
   )
 }
+
+const query = graphql`
+  {
+    specialDish: allContentfulRestaury(filter: {special: {eq: true}}) {
+      nodes {
+        id
+        foodName
+        price
+        image {
+          gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+        }
+      }
+    }
+  }
+`
 
 export {
   ContactInfo,

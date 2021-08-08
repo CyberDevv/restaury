@@ -39,7 +39,7 @@ const IndexPage = () => (
             <SectionTitle title="Popular Dishes" />
 
             {/* dishes */}
-            <div className="mt-24">
+            <div className="mt-24 popularSlide">
               <Card />
             </div>
           </div>

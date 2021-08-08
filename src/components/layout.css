@@ -72,11 +72,16 @@ body {
   width: 100% !important;
 }
 
-.slick-dots li button:before {
+.popularSlide .slick-dots li button:before {
   color: #ddd !important;
+  background-color: aliceblue;
+}
+
+.slick-dots li button:before {
+  color: #333 !important;
   width: 15px !important;
   height: 15px !important;
-  background-color: aliceblue;
+  background-color: #2d2f31;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -86,41 +91,20 @@ body {
 
 .slick-next, .slick-prev {
   font-size: 0;
-line-height: 0;
-position: absolute;
-top: 50%;
-display: block;
-width: 0px !important;
-height: 0px !important;
-padding: 0;
-transform: translate(0, -50%);
-color: transparent;
-border: none;
-outline: none;
-background: transparent;
-}
-
-/* .mySliderClass::after {
-  content: "My name is my name";
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  line-height: 0;
   position: absolute;
-  top: 18px;
-  bottom: 18px;
-  right: 18px;
-  left: 18px;
-  border: 2px solid red;
-  /* border-top-color: red;
-  border-right-color: red;
-  border-bottom-color: red;
-  border-left-color: red; */
-  /* transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-} */
-
-/* .mySliderClass:hover::after {
-  border-color: #c7ad88;
-}  */
+  top: 50%;
+  display: block;
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0;
+  transform: translate(0, -50%);
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+}

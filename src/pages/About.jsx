@@ -62,12 +62,14 @@ const About = () => {
                     alt="about"
                     layout="constrained"
                     placeholder="tracedSVG"
+                    className= "h-60 w-40 md:h-96 md:w-60"
                   />
                   <StaticImage
                     src="../images/about-2.jpg"
                     alt="about"
                     layout="constrained"
                     placeholder="tracedSVG"
+                    className= "h-60 w-40 md:h-96 md:w-60"
                   />
                 </div>
                 <div className="absolute top-0 h-full w-full p-6">
