@@ -8,9 +8,6 @@ module.exports = {
     description: `We deliver the best of fast food out there.`,
     author: `@CyberDevv`,
   },
-  flags: {
-    THE_FLAG: false,
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

@@ -7,7 +7,7 @@ import { BiTime } from "react-icons/bi"
 import { FaUserFriends } from "react-icons/fa"
 import { getImage, StaticImage, GatsbyImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
-import Slider from 'react-slick'
+import Slider from "react-slick"
 
 const ContactInfoDetail = ({ label, desc1, desc2 }) => {
   return (
@@ -205,7 +205,7 @@ const CountCard = ({ experience, chiefs, clients, hours }) => {
 
 const TodaySpecialCard = () => {
   const data = useStaticQuery(query)
-  const specialDish = data.specialDish.nodes
+  const specialDishes = data.specialDish.nodes
   const settings = {
     autoplay: true,
     arrows: false,
@@ -233,7 +233,7 @@ const TodaySpecialCard = () => {
   }
   return (
     <Slider {...settings}>
-      {specialDish.map(dish => {
+      {specialDishes.map(dish => {
         const { id, foodName, price, image } = dish
         const pathToImage = getImage(image)
         return (
@@ -244,7 +244,7 @@ const TodaySpecialCard = () => {
                 alt={foodName}
                 className="h-full"
               />
-              <div className="absolute top-0 bg-black bg-opacity-50 h-full w-full flex justify-start items-center px-4 lg:px-0">
+              <div className="absolute top-0 bg-black bg-opacity-50 h-full w-full flex justify-start items-center px-4 lg:px-8">
                 <div className="text-white tracking-widest font-bold text-lg">
                   <h3 className="uppercase">{foodName}</h3>
                   <div className="bg-primary w-10 h-0.5 my-8"></div>
@@ -259,16 +259,114 @@ const TodaySpecialCard = () => {
   )
 }
 
-const MenuList = ({ title, desc, price }) => {
+const AppetizerMenuList = () => {
+  const data = useStaticQuery(query)
+  const appetizers = data.appetizer.nodes
   return (
-    <div className="flex justify-between space-x-12">
-      <div className=" lg:pr-36">
-        <h3 className="text-primary uppercase font-bold tracking-widest">
-          {title}
-        </h3>
-        <p className="text-gray-500 mt-4 font-sans">{desc}</p>
-      </div>
-      <h4 className="text-primary font-bold tracking-widest">{price}</h4>
+    <div className= "space-y-8">
+      {appetizers.map(dish => {
+        const {
+          id,
+          foodName,
+          description: { description },
+          price,
+        } = dish
+        return (
+          <div key={id} className="flex justify-between space-x-12">
+            <div className=" lg:pr-36">
+              <h3 className="text-primary uppercase font-bold tracking-widest">
+                {foodName}
+              </h3>
+              <p className="text-gray-500 mt-4 font-sans">{description}</p>
+            </div>
+            <h4 className="text-primary font-bold tracking-widest">${price}</h4>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+const PizzaMenuList = () => {
+  const data = useStaticQuery(query)
+  const pizzas = data.pizza.nodes
+  return (
+    <div className="space-y-8">
+      {pizzas.map(dish => {
+        const {
+          id,
+          foodName,
+          description: { description },
+          price,
+        } = dish
+        return (
+          <div key={id} className="flex justify-between space-x-12">
+            <div className=" lg:pr-36">
+              <h3 className="text-primary uppercase font-bold tracking-widest">
+                {foodName}
+              </h3>
+              <p className="text-gray-500 mt-4 font-sans">{description}</p>
+            </div>
+            <h4 className="text-primary font-bold tracking-widest">${price}</h4>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+const DessetsMenuList = () => {
+  const data = useStaticQuery(query)
+  const dessets_and_drinkss = data.dessets_and_drinks.nodes
+  return (
+    <div className="space-y-8">
+      {dessets_and_drinkss.map(dish => {
+        const {
+          id,
+          foodName,
+          description: { description },
+          price,
+        } = dish
+        return (
+          <div key={id} className="flex justify-between space-x-12">
+            <div className=" lg:pr-36">
+              <h3 className="text-primary uppercase font-bold tracking-widest">
+                {foodName}
+              </h3>
+              <p className="text-gray-500 mt-4 font-sans">{description}</p>
+            </div>
+            <h4 className="text-primary font-bold tracking-widest">${price}</h4>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+const MainDishMenuList = () => {
+  const data = useStaticQuery(query)
+  const main_dishs = data.main_dish.nodes
+  return (
+    <div className= "space-y-8">
+      {main_dishs.map(dish => {
+        const {
+          id,
+          foodName,
+          description: { description },
+          price,
+        } = dish
+        return (
+          <div key={id} className="flex justify-between space-x-12">
+            <div className=" lg:pr-36">
+              <h3 className="text-primary uppercase font-bold tracking-widest">
+                {foodName}
+              </h3>
+              <p className="text-gray-500 mt-4 font-sans">{description}</p>
+            </div>
+            <h4 className="text-primary font-bold tracking-widest">${price}</h4>
+          </div>
+        )
+      })}
     </div>
   )
 }
@@ -288,7 +386,7 @@ const HeaderBlock = ({ title, desc }) => {
 
 const query = graphql`
   {
-    specialDish: allContentfulRestaury(filter: {special: {eq: true}}) {
+    specialDish: allContentfulRestaury(filter: { special: { eq: true } }) {
       nodes {
         id
         foodName
@@ -296,6 +394,52 @@ const query = graphql`
         image {
           gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
         }
+      }
+    }
+
+    appetizer: allContentfulRestaury(filter: { tag: { eq: "appetizer" } }) {
+      nodes {
+        id
+        foodName
+        description {
+          description
+        }
+        price
+      }
+    }
+
+    pizza: allContentfulRestaury(filter: { tag: { eq: "pizza" } }) {
+      nodes {
+        id
+        foodName
+        description {
+          description
+        }
+        price
+      }
+    }
+
+    dessets_and_drinks: allContentfulRestaury(
+      filter: { tag: { eq: "dessert and drinks" } }
+    ) {
+      nodes {
+        id
+        foodName
+        description {
+          description
+        }
+        price
+      }
+    }
+
+    main_dish: allContentfulRestaury(filter: { tag: { eq: "main dish" } }) {
+      nodes {
+        id
+        foodName
+        description {
+          description
+        }
+        price
       }
     }
   }
@@ -307,6 +451,9 @@ export {
   TestimonialCard,
   CountCard,
   TodaySpecialCard,
-  MenuList,
+  AppetizerMenuList,
+  MainDishMenuList,
+  DessetsMenuList,
+  PizzaMenuList,
   HeaderBlock,
 }

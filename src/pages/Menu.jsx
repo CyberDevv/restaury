@@ -4,9 +4,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import {
   HeaderBlock,
-  MenuList,
+  AppetizerMenuList,
   SectionTitle,
   TodaySpecialCard,
+  PizzaMenuList,
+  DessetsMenuList,
+  MainDishMenuList,
 } from "../components/simpleComponents"
 
 const Menu = () => {
@@ -40,31 +43,7 @@ const Menu = () => {
             <div className="my-24 container mx-auto px-4 sm:w-8/12 lg:pl-16 lg:pr-8">
               <SectionTitle title="Appetizers" />
               <div className="mt-16 space-y-8">
-                <MenuList
-                  title="BAKED POTATO JACKETS"
-                  desc="Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
-                  price="$8.50"
-                />
-                <MenuList
-                  title="Avocado shell stuffed"
-                  desc="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit."
-                  price="$5.65"
-                />
-                <MenuList
-                  title="QUESADILLAS ACAPULCO"
-                  desc="Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
-                  price="$12.00"
-                />
-                <MenuList
-                  title="VENEZUELAN SCRAMBLED EGGS"
-                  desc="Nullam mollis. Ut justo. Suspendisse potenti."
-                  price="$5.30"
-                />
-                <MenuList
-                  title="TEX-MEX CHICKEN WINGS"
-                  desc="Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
-                  price="$3.80"
-                />
+                <AppetizerMenuList />
               </div>
             </div>
             <StaticImage
@@ -87,32 +66,8 @@ const Menu = () => {
             />
             <div className="py-24 container mx-auto px-4 bg-gray-100 sm:w-8/12 lg:pl-16 lg:pr-8">
               <SectionTitle title="Main Dishes" light />
-              <div className="mt-16 space-y-8">
-                <MenuList
-                  title="BAKED POTATO JACKETS"
-                  desc="Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
-                  price="$8.50"
-                />
-                <MenuList
-                  title="Avocado shell stuffed"
-                  desc="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit."
-                  price="$5.65"
-                />
-                <MenuList
-                  title="QUESADILLAS ACAPULCO"
-                  desc="Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
-                  price="$12.00"
-                />
-                <MenuList
-                  title="VENEZUELAN SCRAMBLED EGGS"
-                  desc="Nullam mollis. Ut justo. Suspendisse potenti."
-                  price="$5.30"
-                />
-                <MenuList
-                  title="TEX-MEX CHICKEN WINGS"
-                  desc="Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
-                  price="$3.80"
-                />
+              <div className="mt-16">
+                <MainDishMenuList />
               </div>
             </div>
           </div>
@@ -121,32 +76,8 @@ const Menu = () => {
           <div className="sm:flex">
             <div className="my-24 container mx-auto px-4 sm:w-8/12 lg:pl-16 lg:pr-8">
               <SectionTitle title="Pizza" />
-              <div className="mt-16 space-y-8">
-                <MenuList
-                  title="BAKED POTATO JACKETS"
-                  desc="Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
-                  price="$8.50"
-                />
-                <MenuList
-                  title="Avocado shell stuffed"
-                  desc="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit."
-                  price="$5.65"
-                />
-                <MenuList
-                  title="QUESADILLAS ACAPULCO"
-                  desc="Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
-                  price="$12.00"
-                />
-                <MenuList
-                  title="VENEZUELAN SCRAMBLED EGGS"
-                  desc="Nullam mollis. Ut justo. Suspendisse potenti."
-                  price="$5.30"
-                />
-                <MenuList
-                  title="TEX-MEX CHICKEN WINGS"
-                  desc="Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
-                  price="$3.80"
-                />
+              <div className="mt-16">
+                <PizzaMenuList />
               </div>
             </div>
             <StaticImage
@@ -169,32 +100,8 @@ const Menu = () => {
             />
             <div className="py-24 container mx-auto px-4 bg-gray-100 sm:w-8/12 lg:pl-16 lg:pr-8">
               <SectionTitle title="Dessets &amp; Drinks" light />
-              <div className="mt-16 space-y-8">
-                <MenuList
-                  title="BAKED POTATO JACKETS"
-                  desc="Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
-                  price="$8.50"
-                />
-                <MenuList
-                  title="Avocado shell stuffed"
-                  desc="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit."
-                  price="$5.65"
-                />
-                <MenuList
-                  title="QUESADILLAS ACAPULCO"
-                  desc="Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
-                  price="$12.00"
-                />
-                <MenuList
-                  title="VENEZUELAN SCRAMBLED EGGS"
-                  desc="Nullam mollis. Ut justo. Suspendisse potenti."
-                  price="$5.30"
-                />
-                <MenuList
-                  title="TEX-MEX CHICKEN WINGS"
-                  desc="Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
-                  price="$3.80"
-                />
+              <div className="mt-16">
+                <DessetsMenuList />
               </div>
             </div>
           </div>
