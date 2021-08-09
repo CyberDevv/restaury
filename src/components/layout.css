@@ -89,7 +89,8 @@ body {
   -o-border-radius: 50%;
 }
 
-.slick-next, .slick-prev {
+.slick-next,
+.slick-prev {
   font-size: 0;
   line-height: 0;
   position: absolute;
@@ -110,14 +111,23 @@ body {
 }
 
 .navBar {
-  transition: all 3s ease-in-out;
-  -webkit-transition: all 3s ease-in-out;
-  -moz-transition: all 3s ease-in-out;
-  -ms-transition: all 3s ease-in-out;
-  -o-transition: all 3s ease-in-out;
+  transition: all .769s ease-in-out;
+  -webkit-transition: all .769s ease-in-out;
+  -moz-transition: all .769s ease-in-out;
+  -ms-transition: all .769s ease-in-out;
+  -o-transition: all .769s ease-in-out;
 }
 
 .navScrolled {
-  background-color:rgba(34, 34, 34);
+  background-color: rgb(39, 37, 37);
+  top: 0;
   /* color: white; */
+}
+
+.navMenu {
+  transition: all 2s ease-in-out;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
 }

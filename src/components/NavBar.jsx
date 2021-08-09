@@ -5,7 +5,7 @@ function NavBar() {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 fixed bg-dark bg-opacity-80 top-0 z-10 w-full lg:pt-8 navBar">
+    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 fixed top-5 z-10 w-full lg:pt-8 navBar">
       {/* Logo */}
       <Link
         to="/"
@@ -63,8 +63,8 @@ function NavBar() {
       </Link>
       <div className="block lg:hidden">
         <button
-          onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 text-gray-200 hover:text-gray-600 border border-gray-200 rounded hover:border-gray-600 hover:bg-gray-300 duration-300 transition-colors"
+          
+          className="flex items-center px-3 py-2 text-gray-200 hover:text-gray-600 border border-gray-200 rounded hover:border-gray-600 hover:bg-gray-300 duration-300 transition-colors button"
         >
           <svg
             className="w-5 h-5 fill-current hover:text-primarry"
@@ -76,11 +76,11 @@ function NavBar() {
         </button>
       </div>
       <div
-        className={`${
-          isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
-      >
-        <div className="text-xs lg:text-sm font-semibold lg:flex-grow lg:flex lg:justify-around uppercase bg-secondary bg-opacity-70 py-3 px-4 lg:px-0 lg:py-0 space-y-4 lg:space-y-0 lg:bg-transparent tracking-widest">
+        className="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+          >
+          {/* isExpanded ? `translate-y-40 block` : `-translate-y-40 hidden`
+        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`} */}
+        <div className="text-xs lg:text-sm font-semibold lg:flex-grow lg:flex lg:justify-around uppercase bg-secondary bg-opacity-70 py-3 px-4 lg:px-0 lg:py-0 space-y-4 lg:space-y-0 lg:bg-transparent tracking-widest navMenu">
           <Link
             to={`/`}
             href="#responsive-header"
