@@ -42,7 +42,7 @@ const Menu = () => {
           <div className="sm:flex">
             <div className="my-24 container mx-auto px-4 sm:w-8/12 lg:pl-16 lg:pr-8">
               <SectionTitle title="Appetizers" />
-              <div className="mt-16 space-y-8">
+              <div className="mt-16">
                 <AppetizerMenuList />
               </div>
             </div>

@@ -432,7 +432,7 @@ const query = graphql`
       }
     }
 
-    main_dish: allContentfulRestaury(filter: { tag: { eq: "main dish" } }) {
+    main_dish: allContentfulRestaury(filter: { tag: { eq: "man dish" } }) {
       nodes {
         id
         foodName

@@ -5,7 +5,7 @@ function NavBar() {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 fixed bg-dark bg-opacity-80 top-0 z-10 w-full lg:pt-8">
+    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 fixed bg-dark bg-opacity-80 top-0 z-10 w-full lg:pt-8 navBar">
       {/* Logo */}
       <Link
         to="/"
