@@ -13,7 +13,7 @@ const settings = {
 
 const Carousel = () => {
     return (
-      <Slider {...settings} className="">
+      <Slider {...settings}>
         <div className="relative h-screen">
           <StaticImage
             className="h-screen"
@@ -30,7 +30,7 @@ const Carousel = () => {
               Invative and invoice <br className="hidden lg:inline-block" />{" "}
               Projects
             </h3>
-            <button className="btn">Read more</button>
+            <button className="btn cursor-pointer">Read more</button>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ const Carousel = () => {
               We are an Agent <br className="hidden lg:inline-block" />{" "}
               of Creativity
             </h3>
-            <button className="btn">Read more</button>
+            <button className="btn cursor-pointer">Read more</button>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ const Carousel = () => {
             <h5 className="uppercase text-light text-xs lg:text-lg tracking-wider">
               Frest & Premium Ingredients everytime
             </h5>
-            <button className="btn">Set the menu</button>
+            <button className="btn cursor-pointer">Set the menu</button>
           </div>
         </div>
       </Slider>

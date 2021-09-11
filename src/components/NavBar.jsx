@@ -5,8 +5,8 @@ function NavBar() {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 fixed top-5 z-10 w-full lg:pt-8 navBar">
-      {/* Logo */}
+    <nav className="fixed z-10 flex flex-wrap items-center justify-between w-full p-6 mb-6 top-5 lg:pt-8 navBar">
+      {/* ANCHOR Logo */}
       <Link
         to="/"
         className="flex items-center flex-shrink-0 mr-6 text-white cursor-pointer"
@@ -61,10 +61,12 @@ function NavBar() {
           </defs>
         </svg>
       </Link>
+
+      {/* ANCHOR Hamburger */}
       <div className="block lg:hidden">
         <button
-          
-          className="flex items-center px-3 py-2 text-gray-200 hover:text-gray-600 border border-gray-200 rounded hover:border-gray-600 hover:bg-gray-300 duration-300 transition-colors button"
+          onClick={() => toggleExpansion(!isExpanded)}
+          className="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 border border-gray-200 rounded hover:text-gray-600 hover:border-gray-600 hover:bg-gray-300 button"
         >
           <svg
             className="w-5 h-5 fill-current hover:text-primarry"
@@ -75,12 +77,13 @@ function NavBar() {
           </svg>
         </button>
       </div>
+
       <div
-        className="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
-          >
-          {/* isExpanded ? `translate-y-40 block` : `-translate-y-40 hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`} */}
-        <div className="text-xs lg:text-sm font-semibold lg:flex-grow lg:flex lg:justify-around uppercase bg-secondary bg-opacity-70 py-3 px-4 lg:px-0 lg:py-0 space-y-4 lg:space-y-0 lg:bg-transparent tracking-widest navMenu">
+        className={`${
+          isExpanded ? "block" : "hidden"
+        } w-full flex-grow lg:flex lg:items-center lg:w-auto`}
+      >
+        <div className="px-4 py-3 space-y-4 text-xs font-semibold tracking-widest uppercase lg:text-sm lg:flex-grow lg:flex lg:justify-around bg-secondary lg:px-0 lg:py-0 lg:space-y-0 lg:bg-transparent navMenu">
           <Link
             to={`/`}
             href="#responsive-header"
@@ -96,7 +99,11 @@ function NavBar() {
           >
             About Us
           </Link>
-          <Link to={`/Menu`} className="navItem" activeClassName="text-primary active">
+          <Link
+            to={`/Menu`}
+            className="navItem"
+            activeClassName="text-primary active"
+          >
             Menu
           </Link>
           <Link
@@ -105,9 +112,6 @@ function NavBar() {
             activeClassName="text-primary active"
           >
             Reservation
-          </Link>
-          <Link to={`/Blog`} className="navItem" activeClassName="text-primary active">
-            Blog
           </Link>
         </div>
       </div>

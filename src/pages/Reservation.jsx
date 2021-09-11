@@ -20,15 +20,15 @@ const Reservation = () => {
           <HeaderBlock title="Our Reservation" desc="Book a Table online" />
         </div>
 
-        <div className="bg-gray-100 py-16 px-4">
+        <div className="px-4 py-16 bg-gray-100">
           <div className="container mx-auto">
-            <h4 className="uppercase text-center text-primary tracking-widest font-semibold">
+            <h4 className="font-semibold tracking-widest text-center uppercase text-primary">
               Opening Hour 8:00 AM - 10:00 PM, Every day.
             </h4>
 
             {/* Form */}
-            <div className="mt-12 flex justify-center items-center flex-col">
-              <div className="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-8 w-8/12">
+            <div className="flex flex-col items-center justify-center mt-12">
+              <div className="w-8/12 space-y-8 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-8">
                 <input
                   type="text"
                   className="reservationInput"

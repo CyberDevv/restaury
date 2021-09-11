@@ -31,7 +31,7 @@ const IndexPage = () => (
         {/* Reservation */}
         <div className="relative w-full mt-16 lg:mt-28">
           <StaticImage
-            className="h-72 lg:h-screen"
+            className="h-72 lg:h-screen xl:h-screenSeventy"
             src="../images/reservation.jpg"
             alt="reservation"
             placeholder="tracedSVG"
